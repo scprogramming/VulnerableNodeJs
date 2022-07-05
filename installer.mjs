@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import { SqlHandler } from './SqlHandler.mjs';
 
-const data = fs.readFileSync('../sql.conf', {encoding:'utf8',flags:'r'});
+const data = fs.readFileSync('./sql.conf', {encoding:'utf8',flags:'r'});
 var params = data.split(',');
 
 var sqlConn = new SqlHandler(params[0],params[1],params[2],params[3],"vuln");
